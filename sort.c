@@ -11,7 +11,7 @@ void swap(int *xp, int *yp)
 void bubbleSort(int arr[], int n) 
 { 
    int i, j; 
-   bool swapped; 
+   bool swapp; 
    for (i = 0; i < n-1; i++) 
    { 
      //fix for sort
@@ -21,10 +21,10 @@ void bubbleSort(int arr[], int n)
         if (arr[j] > arr[j+1]) 
         { 
            swap(&arr[j], &arr[j+1]); 
-           swapped = true; 
+           swapp = true; 
         } 
      } 
-      if (swapped == true) 
+      if (swapp == true) 
         break; 
    } 
 } 
@@ -41,8 +41,13 @@ void printArray(int arr[], int size)
 // Driver program to test above functions 
 int main() 
 { 
-    int arr[] = {64, 34, 25, 12, 22, 11, 90}; 
-    int n = sizeof(arr)/sizeof(arr[0]); 
+    //updated code to accept dynamic input
+    int n;
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++){
+      cin>>a[i];
+    }
     bubbleSort(arr, n); 
     printf("Sorted array: \n"); 
     printArray(arr, n); 
